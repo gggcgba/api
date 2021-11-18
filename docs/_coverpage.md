@@ -1,8 +1,12 @@
-# API
+
+# smart-doc <small> ![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc) </small>
 
 
-> 我要开始装X了
+> A non-intrusive api interface document generator.
 
+* Smart-doc is a java restful api document generation tool.
+* Smart-doc is based on interface source code analysis to generate interface documentation, completely zero-injection.
 
-[CSDN](https://blog.csdn.net/buchengbugui/article/details/60972176)
-[滚动鼠标](#introduction)
+[GitHub](https://github.com/smart-doc-group/smart-doc)
+[Getting Started](#smart-doc)
+
