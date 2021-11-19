@@ -57,5 +57,5 @@ smart-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/
 
 愿意参与构建最美-doc或者是需要交流问题可以加入微信：
 
-<img src="https://github.com/gggcgba/api/blob/master/docs/_images/wechat.png?raw=true" title="qq群" width="200px" height="210px"/>
+<img src="https://github.com/gggcgba/api/blob/master/docs/_images/wechat.png?raw=true" title="微信二维码" width="210px" height="210px"/>
 
