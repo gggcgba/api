@@ -6,12 +6,11 @@
 ![closed pull requests](https://img.shields.io/github/issues-pr-closed/shalousun/smart-doc)
 ![java version](https://img.shields.io/badge/JAVA-1.8+-green.svg)
 
-> smart-doc是一款同时支持JAVA REST API和Apache Dubbo RPC接口文档生成的工具。
+> 最迷人-doc操作电商数据一条龙。
 
 ## 概述
-smart-doc在业内率先提出基于JAVA泛型定义推导的理念， 完全基于接口源码来分析生成接口文档，不采用任何注解侵入到业务代码中。你只需要按照java-doc标准编写注释， smart-doc就能帮你生成一个简易明了的Markdown、HTML5、Postman Collection2.0+、OpenAPI 3.0+的文档。
+最迷人-doc概述。
 
-> 无论你是很有经验的大佬、还是刚入行的萌新。遇到使用疑惑时，我们希望你能仔细阅读smart-doc官方码云的wiki文档。我们将smart-doc及其插件的 每一个配置项和可能在日常中遇到的问题都整理到了文档中。仔细阅读文档就是对开源项目最大的支持。
 
 查看[快速开始](zh-cn/start/quickstart.md)了解详情。
 
@@ -22,9 +21,9 @@ smart-doc在业内率先提出基于JAVA泛型定义推导的理念， 完全基
 
 ## License
 
-smart-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/smart-doc-group/smart-doc/blob/master/LICENSE) file for details.
+最迷人-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/gggcgba/api) file for details.
 
-**注意：** smart-doc源代码文件全部带有版权注释，使用关键代码二次开源请保留原始版权，否则后果自负！
+**注意：** 最迷人-doc源代码文件全部带有版权注释，使用关键代码二次开源请保留原始版权，否则后果自负！
 
 
 ## 谁在使用

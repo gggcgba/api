@@ -4,9 +4,8 @@
 
 > 电商数据API.
 
-* 最迷人-doc是一款同时支持java restful api和apache dubbo rpc接口文档生成的工具。
-* 完全基于注释生成文档，做到零侵入。
+* 最迷人-doc是一款同时支持 淘宝 天猫 1688等电商 数据工具。
 
 [CSDN](https://blog.csdn.net/buchengbugui/article/details/60972176)
-[滚动鼠标](#smart-doc)
+[滚动鼠标](#最迷人-doc)
 
