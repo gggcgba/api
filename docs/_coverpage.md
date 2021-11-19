@@ -1,12 +1,12 @@
 
-# smart-doc <small> ![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc) </small>
+# 电商平台 <small> ![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc) </small>
 
 
-> A non-intrusive api interface document generator.
+> 电商数据API.
 
-* Smart-doc is a java restful api document generation tool.
-* Smart-doc is based on interface source code analysis to generate interface documentation, completely zero-injection.
+* 最迷人-doc是一款同时支持java restful api和apache dubbo rpc接口文档生成的工具。
+* 完全基于注释生成文档，做到零侵入。
 
-[GitHub](https://github.com/smart-doc-group/smart-doc)
-[Getting Started](#smart-doc)
+[CSDN](https://blog.csdn.net/buchengbugui/article/details/60972176)
+[滚动鼠标](#smart-doc)
 

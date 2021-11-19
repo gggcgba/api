@@ -1,650 +1,704 @@
-# Changelog
+# 变更日志
 
-## Version: 2.2.5
-- Update date: 2021-08-28
-- Update content:
-  1. Support not displaying parameter list in html document.
-  2. All resources used in html documents are changed to local references.
-  3. Fix the bug that the is prefix is ​​removed when the Boolean type field is named as the is prefix.
-  4. After the dictionary code list is configured, the enumeration field comment display error [git #139](https://github.com/smart-doc-group/smart-doc/issues/139) is fixed.
-  5. Fix the array out-of-bounds exception during the analysis process.
-  6. Added interface grouping support.
+#### 版本号：2.3.1
+- 更新日期: 2021-11-13
+- 更新内容：
+  1. 修复debug调试不支持请求头设置中文值的bug。
+  2. 修复response自定义tag设置返回未格式化换行问题。
+  3. 修复枚举类型字段指定mock不生效的问题。
+  4. 新增对@SessionAttribute参数做忽略。
+  5. 支持controller实现接口，并使用default方法。
+
+#### 版本号：2.3.0
+- 更新日期: 2021-11-07
+- 更新内容：
+  1. 修复创建html文档丢失search.js文件问题。
+  2. 修复packageFilters配置多个包时只有第一个生效的问题。
+  3. 修复debug调试页面的curl指令错误。
+  4. 修复设置了下载文件接口加download标记后，数据并未生效的bug。
+  5. 优化一些部分常见字段的随机值生成。
+  
+#### 版本号：2.2.9
+
+- 更新日期: 2021-10-31
+- 更新内容：
+  1. 修复生成openapi文件上传错误问题。
+  2. 修复文件上传接口推送到torna参数被放置到query参数列表的问题。
+  3. 修改List<T>类型参数推送到torna错误的问题
+  4. 优化outPath配置，只使用torna推送时可以不再要求配置outPath项。
+
+#### 版本号：2.2.8
+
+- 更新日期: 2021-10-07
+- 更新内容：
+  1. 修复html文档无接口注释时锚点跳转错误的问题。
+  2. 修复导出postman时服务端口配置成变量报错的问题。
+
+#### 版本号：2.2.7
+- 更新日期: 2021-09-12
+- 更新内容：
+  1. 修复dubbo文档css连接错误。
+  2. 修复分组后组归错误。
+  3. 修复路径常量相似度时替换错误的bug。
+  4. JSR303分组优化，标记Null的分组字段将不再显示在文档中 。
+  
+#### 版本号：2.2.6
+
+- 更新日期: 2021-09-05
+- 更新内容：
+  1. 修复html文档静态资源链接错误。
+  2. 不配置分组时不显示分组。
+  3. 修复分组后目录item搜索错误。
+  4. 优化maven插件提示 。
 
 
-## Version: 2.2.4
-- Update date: 2021-08-08
-- Update content:
-  1. Fix dictionary code push torna error [gitee #I43JQR](https://gitee.com/smart-doc-team/smart-doc/issues/I43JQR).
-  2. Added support for jsr303 @size and @length.
-  3. Modify the html template style error.
-  4. Fix postman error #I41G2E.
-  5. Added isReplace configuration.
-  6. Fix the issue that some annotations become invalid when there are multiple jsr annotations.
+#### 版本号：2.2.5
+- 更新日期: 2021-08-28
+- 更新内容：
+  1. 支持在html文档中不显示参数列表。
+  2. html文档使用的资源全部改成本地引用。
+  3. 修复Boolean类型字段命名为is前缀时，is前缀被去除的bug。
+  4. 修复配置了字典码列表后枚举字段注释显示错误[git #139](https://github.com/smart-doc-group/smart-doc/issues/139) 。
+  5. 修复分析过程中出现的数组越界异常 。
+  6. 新增接口分组支持。
 
 
-## Version: 2.2.3
-- Update date: 2021-07-18
-- Update content:
-  1. The pathPrefix configuration item is added to configure the context. After the configuration item is introduced, the serverUrl is only used to configure the server address.
-  2. Support request header constant setting analysis.
-  3. Support the use of JsonIgnoreProperties and JSONType annotations to ignore multiple fields.
-  4. Modify the issue of invalid setting allInOneDocFileName in some documents, [git #131](https://github.com/smart-doc-group/smart-doc/issues/131).
-  5. Fix dubbo rpc document template format error [gitee #I40ZGE](https://gitee.com/smart-doc-team/smart-doc/issues/I40ZGE).
-  6. Support setting global request parameters in the configuration add interceptor, [git #132](https://github.com/smart-doc-group/smart-doc/issues/132).
-  7. Fix the problem that some types of mocks are not pushed to Torna.
+#### 版本号：2.2.4
+- 更新日期: 2021-08-08
+- 更新内容：
+  1. 修复字典码推送torna错误 [gitee #I43JQR](https://gitee.com/smart-doc-team/smart-doc/issues/I43JQR)。
+  2. 新增jsr303 @size和@length支持。
+  3. 修改html的模板样式错误。
+  4. 修复postman错误#I41G2E 。
+  5. 新增isReplace配置 。
+  6. 修复当存在多个jsr注解时，部分注解失效问题。
+
+
+#### 版本号：2.2.3
+- 更新日期: 2021-07-18
+- 更新内容：
+  1. 增加pathPrefix配置项用于配置上下文，引入该配置项后serverUrl仅用于配置服务器地址。
+  2. 支持请求头常量设置解析。
+  3. 支持使用JsonIgnoreProperties和JSONType注解去忽略多字段。
+  4. 修改部分文档设置allInOneDocFileName无效的问题,[git #131](https://github.com/smart-doc-group/smart-doc/issues/131) 。
+  5. 修复dubbo rpc文档模板格式错误 [gitee #I40ZGE](https://gitee.com/smart-doc-team/smart-doc/issues/I40ZGE) .
+  6. 支持配置添加拦截器中设置全局请求参数，[git #132](https://github.com/smart-doc-group/smart-doc/issues/132) .
+  7. 修复部分类型mock未推送到torna的问题。
   
 
-## Version: 2.2.2
+#### 版本号：2.2.2
 
-- Update date: 2021-07-04
-- Update content:
-  1. Fix the problem of regular expression parsing errors encountered in the URL.
-  2. Fix the bug that the generated json sample part is formatted incorrectly, gitee #I3XSE5.
-  3. Enhance the processing of html special characters in the document to prevent display errors after html rendering, gitee #I3XO31.
-  4. The request header setting is enhanced to support the configuration of urlPatterns and excludePathPatterns to match the corresponding interface.
-  5. Optimized the prompts of the maven plug-in. After optimization, the code paths of the modules loaded with those directories can be printed.
-  6. Provides the ability of other frameworks to extend document parsing.
-  7. Fix doc template error, gitee #I3Y640.
-  8. Fix dictionary template error, #119.
-  9. Add ignore HttpServlet object.
-  10. Support built-in replacement of Jpa Pageable paging object, remove unnecessary request parameter replacement configuration.
-  11. PackageFilters are enhanced, and regular matching can be used, gitee #I3YKZ4.
-  12. Fix the data error of dubbo rpc file pushed to Torna.
-  13. Fix the bug that fields with the same name of different classes are overwritten when customResponseFields and customRequestFields are set, gitee #I3Y6AL.
-  14. Fixed the bug that the gradle plugin could not load the dependency and returned an empty json when using implements to add dependencies in a higher version of gradle.
+- 更新日期: 2021-07-04
+- 更新内容：
+  1. 修复url中遇到正则表达解析错误问题.
+  2. 修复生成的json样例部分格式化后错误的bug,gitee #I3XSE5。
+  3. 增强对文档中html特殊字符的处理，防止html渲染后显示错误，gitee #I3XO31。
+  4. 请求头设置增强，支持配置urlPatterns和excludePathPatterns两个属性去匹配对应的接口。
+  5. 优化了maven插件的提示，优化后可以将加载了那些目录模块代码路径打印。
+  6. 提供了其它框架扩展文档解析的能力。
+  7. 修复doc模板错误，gitee #I3Y640。
+  8. 修复字典模板错误，#119。
+  9. 添加忽略HttpServlet对象。
+  10. 支持内置替换Jpa Pageable分页对象，去除不必要的请求参数替换配置。
+  11. packageFilters增强，可使用正则进行匹配，gitee #I3YKZ4 。
+  12. 修复dubbo rpc文档推送到torna数据错误。
+  13. 修复customResponseFields和customRequestFields设置时不同类同名字段覆盖bug，gitee #I3Y6AL。
+  14. 修复高版本gradle中使用implements添加依赖时，gradle插件无法加载依赖导致返回空json的bug。
 
-## Version: 2.2.1
-- Update date: 2021-06-20
-- Update content:
-   1. Remove System.out.print from the code.
+
+#### 版本号：2.2.1
+
+- 更新日期: 2021-06-20
+- 更新内容：
+  1. 移除代码中System.out.print打印.
   
 
-## Version: 2.2.0
-- Update date: 2021-06-20
-- Update content:
-   1. Fix the comment extraction error when the parameter is multi-line comment, gitee #I3TYYP.
-   2. Fix the null pointer problem that may occur in some codes.
-   3. Add @response tag. Support setting response example by yourself
-   4. Fix the example display error when pushing to Torna request or returning as an array
-   5. Character type analysis support.
-   6. Fix the type parsing error of JobDataMap in Quartz.
-   7. Remove YapiBuilder. smart-doc no longer supports other third-party interface systems, please use torna.
+#### 版本号：2.2.0
 
-## Version: 2.1.9
+- 更新日期: 2021-06-20
+- 更新内容：
+  1. 修复参数多行注释时，注释提取错误，gitee #I3TYYP.
+  2. 修复部分代码可能出现的空指针问题。
+  3. 添加@response tag。支持自己设置response example
+  4. 修复推送到torna请求或返回为数组时，示例显示错误
+  5. Character类型解析支持。
+  6. 修复使用Quartz中JobDataMap类型解析错误。
+  7. 移除YapiBuilder。smart-doc不在支持其他第三方接口系统，请使用torna.
 
-- Update date: 2021-05-29
-- Update content:
-   1. Fix the problem that enumeration is displayed in the parameter when inlineEnum is false.
-   2. Return to the Spring file download object to support automatic identification as a file download, reducing the manual tag @download tag.
-   3. Replace the css cdn used by smart-doc, use domestic cdn by default, improve the domestic loading speed, and switch the English environment to use google's cdn.
-   4. Add multi-level generic nested parsing support. gitee #I3T6UV.
-   5. Fix the json sample error in the LocalDateTime type field in the parent class when the parent class is generic.
-   6. Add to push the interface sort order to Torna.
-   7. Fix the bug that the @ignore tag on the class does not take effect.
-   8. Optimized dictionary code push, empty dictionary code will not initiate push request like Torna.
+#### 版本号：2.1.9
 
+- 更新日期: 2021-05-29
+- 更新内容：
+  1. 修复inlineEnum为false时枚举展示在参数中的问题。
+  2. 返回Spring文件下载对象支持自动识别为文件下载，减少手动标记@download tag。
+  3. smart-doc使用的css cdn更换，默认使用国内cdn，提升国内的加载速度，切换英文环境使用google的cdn.
+  4. 添加多层泛型嵌套的解析支持。gitee #I3T6UV .
+  5. 修复父类是泛型时父类中LocalDateTime类型字段生成json样例错误。
+  6. 添加将接口排序order推送到torna中。
+  7. 修复类上的@ignore tag不生效bug.
+  8. 优化字典码推送，空字典码不会像torna发起推送请求。
 
-## Version: 2.1.8
+#### 版本号：2.1.8
 
-- Update date: 2021-05-22
-- Update content:
-    1. Fix the problem of missing some mock values ​​from the push interface to Torna.
-    2. Fix the bug of parsing non-class names into class names when configuring class substitution in parameter comments.
-    3. Support subclasses annotated with @RestController on the parent class to be recognized and scanned
-    4. Added to push the business error code and definition dictionary to Torna.
-    5. Fix the problem that the two tasks of the maven plugin torna-rest and torna-rpc do not add the compilation prefix.
-    6. Fix the problem that the array type json is wrong in the use case of generating json.
-    7. Fix the bug that setting field value in customRequestFields does not take effect in the use case.
-    8. Add @JsonProperty support, support JsonProperty.Access control field.
+- 更新日期: 2021-05-22
+- 更新内容：
+    1. 修复推送接口到torna丢失部分mock值的问题。
+    2. 修复在参数注释中配置类替换时将非类名解析成类名的bug 。
+    3. 支持父类上加@RestController注解的子类能够被识别和扫描
+    4. 新增将业务错误码和定义字典推送到torna。
+    5. 修复maven插件torna-rest和torna-rpc两个task未加编译前缀的问题。
+    6. 修复生成json用例中数组类型json错误的问题。
+    7. 修复customRequestFields中设置字段value在用例中不生效的bug。
+    8. 添加@JsonProperty支持,支持JsonProperty.Access控制字段。
 
-## Version: 2.1.7
+#### 版本号：2.1.7
 
-- Update date: 2021-05-12
-- Update content:
-    1. Add the bug that push interface author information to Torna data error.
-    2. Fix the empty parameter curl command is redundant? Issue number, github.
+- 更新日期: 2021-05-12
+- 更新内容：
+    1. 添加推送接口作者信息到torna数据错误的bug。
+    2. 修复空参数curl命令多余？号问题，github 。
 
-## Version: 2.1.6
+#### 版本号：2.1.6
 
-- Update date: 2021-05-10
-- Update content:
-    1. Fix the bug that does not allow the wrong file upload object to be placed in the List.
-    2. Add the author information of the push interface to torna, and set the push person by configuring the author. If not, the computer user name will be the default.
-    3. Add push queryParams parameter to torna (requires torna 1.6.0+)
+- 更新日期: 2021-05-10
+- 更新内容：
+    1. 修复不允许List中放文件上传对象错误的bug。
+    2. 添加推送接口作者信息到torna,通过配置author设置推送人，不配置默认为计算机用户名。
+    3. 添加推送queryParams参数到torna(需要使用torna 1.6.0+)
 
- ## Version: 2.1.5
+#### 版本号：2.1.5
 
-- Update date: 2021-05-05
-- Update content:
-    1. Fix the missing requestBodyAdvice request sample.
-    2. Add dubbo documents to torna's push.
+- 更新日期: 2021-05-05
+- 更新内容：
+    1. 修复requestBodyAdvice请求样例丢之。
+    2. 添加dubbo文档到torna的推送。
 
-## Version: 2.1.4
+#### 版本号：2.1.4
 
-- Update date: 2021-04-24
-- Update content:
-    1. Fix the problem that the Mapping of the parent class is not inherited when the Controller is inherited.
-    2. After the responseBodyAdvice is configured, the void method in the controller returns a display error.
-    3. Fix the problem of missing pathParams when pushing to Torna.
-    4. Fix the problem of mandatory checking error of binding enumeration in non-json request collection.
-    5. Added requestBodyAdvice support, which can realize request parameter packaging.
-    6. Fix the problem that the type is object when the generic type is List data.
-    7. Fix the problem of invalid configuration when customFiled is an inherited parameter.
+- 更新日期: 2021-04-24
+- 更新内容：
+    1. 修复Controller继承时，父类的Mapping未继承的问题。
+    2. 修复配置responseBodyAdvice后，controller中void方法返回显示错误。
+    3. 修复往torna推送漏掉pathParams的问题。
+    4. 修复非json请求集合中绑定枚举强制检查错误的问题。
+    5. 新增requestBodyAdvice支持，可以实现请求参数包装。
+    6. 修复泛型为List数据时，类型为object问题。
+    7. 修复customFiled为继承参数时配置失效问题。
 
-## Version: 2.1.3
+#### 版本号：2.1.3
 
-- Update date: 2021-04-11
-- Update content:
-    1. Enhance the support for file upload.
-    2. Add customRequestFields configuration item, #97.
-    3. Fix the problem of missing pathParams when pushing to Torna.
-    4. Modify debug test page to support post form request
-    5. Modify the bug that the default value of the enumeration field in the form request object is wrong
+- 更新日期: 2021-04-11
+- 更新内容：
+    1. 增强对文件上传的支持。
+    2. 增加customRequestFields配置项，#97。
+    3. 修复往torna推送漏掉pathParams的问题。
+    4. 修改debug测试页面，支持post表单请求
+    5. 修改表单请求对象中枚举字段默认值错误的bug
 
-## Version: 2.1.2
+#### 版本号：2.1.2
 
-- Update date: 2021-03-29
-- Update content:
-    1. Fix the stack overflow problem of Map nesting in some structures, gitee #I3CCLY.
-    2. Fix Torna data push issue.
+- 更新日期: 2021-03-29
+- 更新内容：
+    1. 修复Map嵌套在某些结构体中栈溢出问题，gitee #I3CCLY。
+    2. 修复Torna数据推送问题。
 
-## Version: 2.1.1
+#### 版本号：2.1.1
 
-- Update date: 2021-03-24
-- Update content:
-    1. Fix the stack overflow problem of Map nesting in some structures, gitee #I3CCLY.
-    2. Fix Torna data push issue.
+- 更新日期: 2021-03-24
+- 更新内容：
+    1. 修复Map嵌套在某些结构体中栈溢出问题，gitee #I3CCLY。
+    2. 修复Torna数据推送问题。
 
-## Version: 2.1.0
+#### 版本号：2.1.0
 
-- Update date: 2021-03-21
-- Update content:
-    1. Add the missing protocol under the url resource of the exported postman.
-    2. Add @ignoreParams custom tag to filter out parameters that you don't want to display in the document.
-    3. Added the function of automatically generating version records.
-    4. Modify the bug pushed by torna.
-    5. Support the url suffix of the old SpringMVC project, and it is not recommended to add any suffixes to the new project.
+- 更新日期: 2021-03-21
+- 更新内容：
+    1. 导出的postman的url资源下添加缺失的protocol。
+    2. 增加@ignoreParams自定义tag来过滤掉不想显示在文档中参数。
+    3. 增加了自动生成版本记录的功能。
+    4. 修改torna推送的bug。
+    5. 支持旧的SpringMVC项目的url后缀，新项目不建议加什么破玩意后缀。
 
-    ## Version: 2.0.9
+#### 版本号：2.0.9
 
-- Update date: 2021-03-12
-- Update content:
-    1. Support UUID and ZonedDateTime field types, #89.
-    2. Add a switch to the map parameter to be compatible with the old project. It is still not recommended to use the map parameter.
-    3. Complete the docking with Torna.
+- 更新日期: 2021-03-12
+- 更新内容：
+    1. 支持UUID和ZonedDateTime字段类型，#89。
+    2. 对map参数增加开关来兼容旧项目，还是不建议使用map参数。
+    3. 完成和Torna的对接。
 
-## Version: 2.0.8
+#### 版本号：2.0.8
 
-- Update date: 2021-02-26
-- Update content:
-    1. Fix the comment that the parameters of the file upload are missing.
-    2. Fix the missing comment bug when parsing the parent class field after ignoring the interface method in 2.0.7.
-    3. Modify the conversion of byte type to convert the past string to int8.
+- 更新日期: 2021-02-26
+- 更新内容：
+    1. 修复文件上传的参数丢失的注释。
+    2. 修复2.0.7新增忽略接口方法后解析父类字段缺失注释bug。
+    3. 修改byte类型的转换，将过去的string转为int8。
 
-## Version: 2.0.7
+#### 版本号：2.0.7
 
-- Update date: 2021-01-30
-- Update content:
-    1. Fix the problem of the context-path not attached to the postman URL.
-    2. Fix the problem of intercepting out of bounds in path parameter parsing with regularization.
-    3. Add capability analysis that ignores the overriding of the get method in the default interface implementation.
-    4. Modify the problem that the custom mock values ​​of field types such as arrays, maps, etc. display errors.
-    5. Fix the processing of headers in mapping.
+- 更新日期: 2021-01-30
+- 更新内容：
+    1. 修复postman的url中不附加的context-path的问题。
+    2. 修复带正则的path路径参数解析出现截取越界的问题。
+    3. 添加对默认接口实现中get方法重写忽略的能力解析。
+    4. 修改数组、map等字段类型的自定义mock值显示错误问题。
+    5. 修复对mapping中headers的处理。
 
-## Version: 2.0.6
+#### 版本号：2.0.6
 
-- Update date: 2021-01-15
-- Update content:
-    1. Fix the use case problem of path parameter with regular path in postman.
-    2. Enhance the analysis and compatibility of ancestral bad code.
+- 更新日期: 2021-01-15
+- 更新内容：
+    1. 修复带正则的path路径参数在postman中用例问题。
+    2. 增强对祖传不良代码的分析兼容。
 
-## Version: 2.0.5
+#### 版本号：2.0.5
 
-- Update date: 2021-01-09
-- Update content:
-    1. Fix the array out-of-bounds when the collection class has no generic parameters as input and output parameters.
-    2. Fix the url splicing problem of newly opened tab access.
+- 更新日期: 2021-01-09
+- 更新内容：
+    1. 修复集合类无泛型参数作为入参出参时的数组越界。
+    2. 修复新开tab访问的url拼接问题。
 
-## Version: 2.0.3-2.0.4
+#### 版本号：2.0.3-2.0.4
 
-- Update date: 2021-01-01
-- Update content:
-    1. Modify the title display of the error list on the page.
-    2. Modify the curl header syntax error on the debug page.
-    3. Modify the json parameter input box of the debug page to allow pasting small pieces of text.
-    4. Solve the problem of using dubbo 2.7+ to generate documentation errors in the provider github #77.
+- 更新日期: 2021-01-01
+- 更新内容：
+    1. 修改页面的错误列表标题显示。
+    2. 修改debug页面curl header语法错误。
+    3. 修改debug页面json参数输入框，允许粘贴小段文本。
+    4. 解决使用dubbo 2.7+，在provider中生成文档出错问题 github #77.
 
-    ## Version: 2.0.2
+#### 版本号：2.0.2
 
-- Update date: 2020-12-27
-- Update content:
-    1. Modify the null pointer exception when creating openapi.
-    2. The problem that the mock value is not used when modifying the debug page.
-    3. The debug page can dynamically update the curl command according to the request.
-    4. Optimize the file download test in the debug page.
-    5. Optimize the bug that the enum enters the parameter mock error.
-    6. The mock page supports using a new window to open the back-end rendered page.
-    7. Modify the bug that generated some field values ​​incorrectly.
-    8. Modify the bug where the generic type is not specified when using the collection field in the class.
-    9. Optimize the type display of collections such as set in the document.
-    10. Add processing of enumeration in the collection field.
-    11. Enumeration serialization supports optimization.
-    12. Added Highlight support to the debug page.
+- 更新日期: 2020-12-27
+- 更新内容：
+    1. 修改创建openapi时的空指针异常。
+    2. 修改debug页面时未使用mock值的问题。
+    3. debug页面可以根据请求动态更新curl命令。
+    4. 优化debug页面中的文件下载测试。
+    5. 优化enum入参mock错误的bug。
+    6. mock页面支持使用新窗口打开后端渲染的页面。
+    7. 修改生成一些字段值生成错误的bug。
+    8. 修改类中使用集合字段未指定泛型可能出错的bug。
+    9. 优化set等集合类在文档中的类型显示。
+    10. 添加对集合字段中枚举的处理。
+    11. 枚举序列化支持优化。
+    12. 调试页面新增Highlight支持。
 
-## Version: 2.0.1
+#### 版本号：2.0.1
 
-- Update date: 2020-12-20
-- Update content:
-    1. The debug page supports file upload.
-    2. Modify the mismatch between the mock value and type of the simple request parameter.
-    3. The debug page fully supports file download testing.
-    4. All html documents support interface directory search.
-    5. Remove the flexmark dependency, delete the old non-allInOne template, and unify the h5 document style.
+- 更新日期: 2020-12-20
+- 更新内容：
+    1. debug调试页面支持文件上传。
+    2. 修改简单请求参数mock值和类型不匹配问题。
+    3. debug页面完全支持文件下载测试。
+    4. 所有html的文档支持接口目录搜索。
+    5. 剔除flexmark依赖，旧的非allInOne模板删除，统一h5文档样式。
 
-## Version: 2.0.0
+#### 版本号：2.0.0
 
-- Update date: 2020-12-13
-- Update content:
-    1. Optimized the display of documents, and presented query and path separately for display
-    2. Optimize the support of openapi 3.0 document specification, which can be integrated with ui such as swagger ui.
-    3. Optimize the support of postman collection 2.0.
-    4. Add group support group.
-    5. Modify some bugs and enhance the use of mock
-    6. Expenditure to create a debug page
+- 更新日期: 2020-12-13
+- 更新内容：
+    1. 优化了文档的显示，将query和path单独提出来做了展示
+    2. 优化openapi 3.0文档规范的支持，可集成swagger ui等ui使用。
+    3. 优化postman collection 2.0的支持。
+    4. 添加分组支持group。
+    5. 修改mock的一些bug和增强使用
+    6. 支出创建debug页面
 
-## Version: 1.9.9.1
+#### 版本号：1.9.9.1
 
-- Update date: 2020-11-23
-- Update content:
-    1. This is an urgently modified version.
-    2. Solve the error when there is a non-path mapping method in the controller of version 1.9.9.
+- 更新日期: 2020-11-23
+- 更新内容：
+    1. 这是一个紧急修改版本。
+    2. 解决1.9.9版本controller中存在非路径映射方法时的错误。
 
-## Version: 1.9.9
+#### 版本号：1.9.9
 
-- Update date: 2020-11-23
-- Update content:
-    1. Modify the bug in 1.9.8 to enable strict check comment mode.
-    2. Modify the parsing error when using generic array parameters.
-    3. Fix the array parsing error in ResponseEntity.
-    4. Fix the document serial number error after the controller method is marked ignore.
-    5. Added support for parsing the path attribute of the @RequestMapping annotation
-    6. Fix the problem that the description information is not displayed in the formdata form in postman
-    7. The html5 allInOne template supports code highlighting.
+- 更新日期: 2020-11-23
+- 更新内容：
+    1. 修改1.9.8启用严格检查注释模式下的bug。
+    2. 修改使用泛型数组参数时解析错误。
+    3. 修复ResponseEntity中的数组解析错误。
+    4. 修复controller方法标注ignore后文档序号错误。
+    5. 增加对@RequestMapping注解的path属性的解析支持
+    6. 修复postman中formdata表单不显示描述信息的问题
+    7. html5 allInOne模板支持代码高亮。
 
-## Version: 1.9.8
+#### 版本号：1.9.8
 
-- Update date: 2020-11-10
-- Update content:
-    1. Ignore the parsing of the Class object.
-    2. Increase the analysis of the abstract Controller method.
-    3. Modify the name resolution error in the dubbo annotation of Ali version.
-    4. Modify the analog value to generate an error.
-    5. Support ResponseBodyAdvice general interface response packaging settings.
-    6. Fix the bug that the fields may be duplicated in the class inheritance and the base class and the implementation interface at the same time.
+- 更新日期: 2020-11-10
+- 更新内容：
+    1. 忽略Class对象的解析。
+    2. 增加对抽象Controller方法的解析。
+    3. 修改阿里版本dubbo注解名称解析错误 。
+    4. 修改模拟值生成错误。
+    5. 支持ResponseBodyAdvice通用接口响应包装设置。
+    6. 修复类同时继承和基类和实现接口中可能出现字段重复的bug。
 
-    ## Version: 1.9.7
+#### 版本号：1.9.7
 
-- Update date: 2020-10-24
-- Update content:
-    1. Fix the parsing error when using? In restful interface generics.
-    2. Optimize rpc html non-all in one problem.
-    3. Automatically add descriptions to rest query parameters to increase readability.
-    4. support ali dubbo,#I22CF7.
+- 更新日期: 2020-10-24
+- 更新内容：
+    1. 修复restful接口泛型中使用?时的解析错误。
+    2. 优化rpc html非all in one的问题。
+    3. 对rest query参数自动添加描述，增加可读性。
+    4. support ali dubbo,#I22CF7 .
     5. support @RequestMapping headers.
 
-## Version: 1.9.6
+#### 版本号：1.9.6
 
-- Update date: 2020-10-09
-- Update content:
-    1. Fix RequestParam parsing error.
-    2. Fix the parsing error when using? In generics.
-    3. Modify the address of the service url to an empty string, and no longer provide the default http prefix
-    4. Add the display switch control of the generic actual type.
-    5. Fix the parsing error when the class inherits a generic class.
-    6. Optimize the smart-doc maven plug-in to improve the user experience under multiple modules.
+- 更新日期: 2020-10-09
+- 更新内容：
+    1. 修复RequestParam 解析错误。
+    2. 修复泛型中使用?时的解析错误。
+    3. 修改服务url的地址为空字符串，不再提供默认http前缀
+    4. 增加泛型实际类型的显示开关控制。
+    5. 修复类继承一个泛型类时的解析错误。
+    6. 优化smart-doc maven插件，提升用户在多模块下的使用体验。
 
-## Version: 1.9.5
+#### 版本号：1.9.5
 
-- Update date: 2020-09-19
-- Update content:
-    1. Set required to false when the interface parameter has no annotation.
-    2. Modify html adaptive.
+- 更新日期: 2020-09-19
+- 更新内容：
+    1. 接口参数无注解时将required设置为false。
+    2. 修改html自适应。
 
-## Version: 1.9.4
+#### 版本号：1.9.4
 
-- Update date: 2020-09-06
-- Update content:
-    1. Add order tag to support api sorting.
-    2. Optimize some duplicate codes.
-    3. Modify the problem of spaces when using constants in the basic URL.
-    4. Add the function of generating yapi files.
+- 更新日期: 2020-09-06
+- 更新内容：
+    1. 添加order tag支持对api做排序。
+    2. 优化一些重复的代码。
+    3. 修改基础url中使用常量出现空格的问题。
+    4. 添加生成yapi文件的功能。
 
-## Version: 1.9.3
+#### 版本号：1.9.3
 
-- Update date: 2020-08-30
-- Update content:
-    1. Fix the problem that the parameter value of the Get request use case is removed from the space.
-    2. Modify the error of the tree data conversion of the complex parameter table.
-    3. Fix the rendering error when using non-allInOne templates.
-    4. Fix the parsing error bug of some generic examples.
-    5. Optimize the processing of MultipartFile file upload parameters and do not analyze the parameters.
+- 更新日期: 2020-08-30
+- 更新内容：
+    1. 修复Get请求用例参数值被去空格问题。
+    2. 修改复杂参数表树型数据转化的错误。
+    3. 修复非allInOne模板使用渲染错误。
+    4. 修复一些泛型例子解析错误bug。
+    5. 优化MultipartFile文件上传参数处理，不对该参数进行展开分析。
 
-    ## Version: 1.9.2
+#### 版本号：1.9.2
 
-- Update date: 2020-08-23
-- Update content:
-    1. Modified the common jsr 303 verification and parsing error problem caused by the modification of the previous version.
-    2. Added the configuration gitee #I1RBJO that ignores the request parameter object.
-    3. Modify the beetl configuration of smart-doc to avoid conflicts with the beetl configuration of the user's business.
-    4. Added interface #40 for obtaining tree format parameter data in ApiDataBuilder.
-    5. Added support for Open Api 3.0.
-    6. The problem of internal null pointers occurs when the dictionary table is empty.
-    7. Optimize curl use cases and increase request headers.
+- 更新日期: 2020-08-23
+- 更新内容：
+    1. 修改前面版本修改引发的普通jsr 303验证解析错误问题。
+    2. 新增忽略请求参数对象的配置gitee #I1RBJO。
+    3. 修改smart-doc的beetl配置避免和用户的业务中beetl配置冲突。
+    4. 新增ApiDataBuilder中获取树形格式参数数据的接口#40。
+    5. 新增对Open Api 3.0的支持。
+    6. 修改字典表空时内部发生空指针的问题。
+    7. 优化curl用例，增加请求头。
 
-## Version: 1.9.1
+#### 版本号：1.9.1
 
-- Update date: 2020-08-02
-- Update content:
-    1. Modify the generic resolution problem caused by the version update.
-    2. Modified the dubbo interface document display problem caused by the 1.8.9 version modification
-    2. Modify the problem of lack of configuration file error when smart-doc-maven-plugin generates dubbo documentation.
-    3. Modify the support for multiple modules of the gradle plugin.
+- 更新日期: 2020-08-02
+- 更新内容：
+    1. 修改进去版本更新导致的泛型解析问题。
+    2. 修改1.8.9版本修改后带来的dubbo接口文档显示问题
+    2. 修改smart-doc-maven-plugin生成dubbo文档时缺乏配置文件错误问题。
+    3. 修改gradle插件的对多模块的支持。
 
-## Version: 1.9.0
+#### 版本号：1.9.0
 
-- Update date: 2020-07-19
-- Update content:
-    1. Modified the confusion problem of dubbo html dependency.
-    2. Add the configuration of custom output file name.
-    3. Add switch configuration items for request and response examples.
-    4. When modifying the parameter verification using JSR303, the default group verification is ignored.
-    5. Modify the problem that jackson JsonIgnore annotation does not take effect in the parameter object.
+- 更新日期: 2020-07-19
+- 更新内容：
+    1. 修改dubbo html依赖部分错乱问题。
+    2. 新增自定义输出文件名称的配置。
+    3. 添加请求和响应示例的开关配置项。
+    4. 修改使用JSR303参数校验时，默认分组验证被忽略问题。
+    5. 修改jackson JsonIgnore注解在参数对象中不生效的问题。
 
-## Version: 1.8.9
+#### 版本号：1.8.9
 
-- Update date: 2020-07-05
-- Update content:
-    1. Modify git #38.
-    2. Modify gitee #I1LBKO.
-    3. Modify fix #39 multi-generic parsing order issue.
-    4. Optimize support for gitee #I1IQKY constant analysis requirements
+- 更新日期: 2020-07-05
+- 更新内容：
+    1. 修改git #38。
+    2. 修改gitee #I1LBKO。
+    3. 修改fix #39多泛型解析顺序问题。
+    4. 优化支持gitee #I1IQKY常量解析需求
 
-## Version: 1.8.8
+#### 版本号：1.8.8
 
-- Update date: 2020-06-21
-- Update content:
-    1. Modify to ignore the analysis of LinkedHashMap, gitee #I1JI5W.
-    2. Modifying the interface or merging analysis with the implementation class is a field duplication problem, gitee #I1JHMW.
-    3. Optimize the problem that the interface method field cannot get docletTag.
-    4. Optimize the display of enumeration parameters and support custom control display.
-    5. Add Feign support.
-    6. Optimize the recursive execution, and provide a limit on the number of recursions externally.
+- 更新日期: 2020-06-21
+- 更新内容：
+    1. 修改忽略对LinkedHashMap的解析，gitee #I1JI5W。
+    2. 修改接口或和实现类合并分析是字段重复问题，gitee #I1JHMW。
+    3. 优化接口方法字段不能获取docletTag的问题。
+    4. 优化枚举参数展示，支持自定义控制显示。
+    5. 添加Feign的支持。
+    6. 优化递归执行，对外提供递归次数限制。
 
-    ## Version: 1.8.7
+#### 版本号：1.8.7
 
-- Update date: 2020-06-01
-- Update content:
-    1. Add the analysis of java interface, such as the Page class of Jpa.
-    2. Enhance the analysis of using @RequestBody to bind parameters.
-    3. Add dubbo rpc document generation support.
-    4. Added the conversion of camel case field format to underscore format.
-    5. The maven plug-in and gradle plug-in provide includes support for easy configuration and loading of third-party libraries.
+- 更新日期: 2020-06-01
+- 更新内容：
+    1. 增加对java接口的分析，例如Jpa的分页Page类。
+    2. 增强对使用@RequestBody绑定参数方法的解析。
+    3. 增加dubbo rpc文档生成支持。
+    4. 增加将驼峰字段格式转化为下划线格式。
+    5. maven插件和gradle插件提供includes支持，方便自行配置加载第三方库。
     6. fix #32.
-    7. Add the function of sorting the document interface according to the interface title.
+    7. 增加文档接口根据接口标题排序功能。
 
-## Version: 1.8.6
+#### 版本号：1.8.6
 
-- Update date: 2020-05-09
-- Update content:
-    1. Add localTime support [gitee #I1F7CW](https://gitee.com/sunyurepository/smart-doc/issues/I1F7CW).
-    2. Optimize smart-doc to import Postman
-       Header issue during collection [gitee #I1EX42](https://gitee.com/sunyurepository/smart-doc/issues/I1EX42)
-    3. Optimize the filtering of the source loaded by smart-doc-maven-plugin, and support the use of wildcards to filter.
-    4. Release the gradle plugin for the first time, release the smart-doc-gradle-plugin plugin,
-    5. Fix general generic parsing error [git #28](https://github.com/smart-doc-group/smart-doc/issues/28).
+- 更新日期: 2020-05-09
+- 更新内容：
+    1. 增加localTime支持[gitee #I1F7CW](https://gitee.com/sunyurepository/smart-doc/issues/I1F7CW)。
+    2. 优化smart-doc导入Postman
+       collection时的header问题[gitee #I1EX42](https://gitee.com/sunyurepository/smart-doc/issues/I1EX42)
+    3. 优化smart-doc-maven-plugin加载source的过滤，支持使用通配符来过滤。
+    4. 首次发布gradle插件，发布smart-doc-gradle-plugin插件，
+    5. 修复通用泛型解析出错[git #28](https://github.com/smart-doc-group/smart-doc/issues/28)。
 
-## Version: 1.8.5
+#### 版本号：1.8.5
 
-- Update date: 2020-04-19
-- Update content:
-    1. Maven plugin error code list export bug[git #I1EHXA](https://gitee.com/sunyurepository/smart-doc/issues/I1EHXA).
-    2. Add @PatchMapping support [gitee #I1EDRF](https://gitee.com/sunyurepository/smart-doc/issues/I1EDRF)
-    3. Solve the problem that javadoc contains duplicate tags to generate document error [gitee #I1ENNM](https://gitee.com/sunyurepository/smart-doc/issues/I1ENNM).
-    4. Modify the problem of data parsing errors when the request parameters are generic.
-    5. Fix the null pointer problem of group verification and do not perform group verification processing on returned objects.
-    6. Optimize the loading of multi-level maven projects by smart-doc-maven-plugin.
-    7. Support the request parameter object to be replaced with another object to render the document
+- 更新日期: 2020-04-19
+- 更新内容：
+    1. maven插件错误码列表导出bug[git #I1EHXA](https://gitee.com/sunyurepository/smart-doc/issues/I1EHXA)。
+    2. 增加@PatchMapping支持[gitee #I1EDRF](https://gitee.com/sunyurepository/smart-doc/issues/I1EDRF)
+    3. 解决javadoc包含重复tag生成文档报错[gitee #I1ENNM](https://gitee.com/sunyurepository/smart-doc/issues/I1ENNM)。
+    4. 修改当请求参数为泛型时数据解析错误问题。
+    5. 修复分组验证空指针问题，不对返回对象做分组验证处理。
+    6. 优化smart-doc-maven-plugin对多级maven项目的加载。
+    7. 支持请求参数对象替换成另外的对象来渲染文档
 
-## Version: 1.8.4
+#### 版本号：1.8.4
 
-- Update date: 2020-03-30
-- Update content:
-    1. @ignore when Controller is added
-       tag, which can be adapted to ignore the controller[git #24](https://github.com/smart-doc-group/smart-doc/issues/24) that does not need to generate documentation.
-    2. Smart-doc card owner when HttpSession is included in the parameter, [gitee #I1CA9M](https://gitee.com/sunyurepository/smart-doc/issues/I1CA9M)
-    3. Solve the problem of smart-doc reporting errors in some complex grouping scenarios [gitee #I1CPSM](https://gitee.com/sunyurepository/smart-doc/issues/I1CPSM).
-    4. Solve the problem that the smart-doc-maven-plugin plug-in reads configuration garbled characters.
+- 更新日期: 2020-03-30
+- 更新内容：
+    1. Controller新增时候@ignore
+       tag,可适应该tag忽略不需要生成文档的controller[git #24](https://github.com/smart-doc-group/smart-doc/issues/24)。
+    2. 参数中包含 HttpSession时smart-doc卡主，[gitee #I1CA9M](https://gitee.com/sunyurepository/smart-doc/issues/I1CA9M)
+    3. 解决一些复杂分组场景smart-doc报错的问题[gitee #I1CPSM](https://gitee.com/sunyurepository/smart-doc/issues/I1CPSM)。
+    4. 解决smart-doc-maven-plugin插件读取配置乱码问题。
 
-## Version: 1.8.3
+#### 版本号：1.8.3
 
-- Update date: 2020-03-21
-- Update content:
-    1. Add comments read from the interface method getter or setter method.
-    2. Modify the default encoding of smart-doc to utf-8 to solve the problem of garbled generated documents.
-    3. Add support for @author tag in the code and support multiple authors.
+- 更新日期: 2020-03-21
+- 更新内容：
+    1. 增加从接口方法getter或者setter方法中读取注释。
+    2. 修改smart-doc默认编码为utf-8，解决生成文档乱码问题。
+    3. 增加对代码中@author tag的支持，支持多作者。
 
-## Version: 1.8.2
+#### 版本号：1.8.2
 
-- Update date: 2020-03-13
-- Update content:
-    1. Modify gitee #I19IYW.
-    2. Modify the title setting error in the document template.
-    3. Modify gitee #I191EO
-    4. Support @Validated grouping
+- 更新日期: 2020-03-13
+- 更新内容：
+    1. 修改gitee #I19IYW 。
+    2. 修改文档模板中的title设置错误。
+    3. 修改gitee #I191EO
+    4. 支持@Validated 分组
 
-    ## Version: 1.8.1
+#### 版本号：1.8.1
 
-- Update date: 2020-01-22
-- Update content:
-    1. Add the analysis of the interface get method.
-    2. Add the analysis of the list generic data in the third-party jar.
-    3. Delete the original lengthy SourceBuilder code.
-    4. Modify the standardization of the method names of AdocDocBuilder, HtmlApiDocBuilder, and ApiDocBuilder. The upgrade of unit tests requires minor changes.
-    5. Modified the bug in the request example after 1.8.0 refactoring to put the header into the common parameter.
-    6. After modifying the parameter and adding @Validated annotation, there is no bug of the parameter information in the document.
-    7. Added support for @Deprecated annotation interface (use line through to complete the style mark)
+- 更新日期: 2020-01-22
+- 更新内容：
+    1. 增加对接口get方法的分析。
+    2. 增加对第三方jar中list泛型数据的解析。
+    3. 删除原来冗长的SourceBuilder代码。
+    4. 修改AdocDocBuilder、HtmlApiDocBuilder、ApiDocBuilder的方法名规范化，单元测试的升级需要做小部分变更。
+    5. 修改1.8.0重构后的请求示例将header放入普通参数的bug。
+    6. 修改参数加上@Validated注解后，文档里没有该参数信息的bug。
+    7. 新增@Deprecated标注接口的支持(使用line through完成样式标记)
 
-## Version: 1.8.0
+#### 版本号：1.8.0
 
-- Update date: 2020-01-01
-- Update content:
-    1. Modify the issues that are not supported by multiple verification annotations on the parameters.
-    2. Modified the problem that the parameters of supporting uploaded files are not listed in the document.
-    3. Added ApiDataBuilder for obtaining document data generated by smart-doc, including headers, dictionaries, error codes, etc.
-    4. Merge the github book html5 template of the fork branch, and add search and anchor points.
-    5. Newly added custom @mock tag is used to specify the field value of the generated document, and the parameter annotation of @param adds the function of mock value (@param name name|Zhang San)
-    6. Key point: smart-doc-maven-plugin, smart-doc's maven plug-in, enhances the support for maven standard projects.
-    7. Fully supports spring form parameter binding analysis.
-    8. Postman json generation supports automatic backfilling of all parameters. No longer need to build parameters yourself.
-    9. Optimize the support for enumerated fields in entity classes.
-    10. Add filtering of static constant fields in entities.
+- 更新日期: 2020-01-01
+- 更新内容：
+    1. 修改参数上多个验证注解不支持的问题。
+    2. 修改支持上传文件参数不列举到文档的问题。
+    3. 新增ApiDataBuilder用于获取smart-doc生成的文档数据，包含header、字典、错误码等。
+    4. 合并fork分支的github book html5模板，新增搜索和锚点。
+    5. 新增自定义@mock tag用于指定生成文档的字段值，@param 的参数注释增加mock值的功能(@param name 姓名|张三)
+    6. 重点：smart-doc的maven插件smart-doc-maven-plugin增强对maven标准项目的支持。
+    7. 全面支持spring的表单参数绑定解析。
+    8. postman json生成支持所有参数自动回填。再也不用自己建参数了。
+    9. 优化对实体类中枚举字段的支持。
+    10. 增加对实体中静态常量常量字段的过滤。
 
-## Version: 1.7.9
+#### 版本号：1.7.9
 
-- Update date: 2019-12-16
-- Update content:
-    1. Modify the bug that the nested object cannot be parsed in the request parameter, refer to gitee #I16AN2.
-    2. When the controller parameter is an array, adding @PathVariable annotation will report a null pointer, refer to gitee #I16F6G
-    3. Added ApiDataBuilder for obtaining document data generated by smart-doc, including headers, dictionaries, error codes, etc.
-    4. Modify the github #9 document error bug.
-    5. The @author display of the new interface is added. The method finds the person in charge of the interface from the document, and can choose to close the display when generating the document.
-    6. Focus: Smart-doc-maven-plugin 1.0.0 version of smart-doc's maven plug-in is released.
+- 更新日期: 2019-12-16
+- 更新内容：
+    1. 修改request请求参数中嵌套对象不能解析的bug，参考gitee #I16AN2.
+    2. controller参数是数组时添加@PathVariable注解会报空指针,参考gitee #I16F6G
+    3. 新增ApiDataBuilder用于获取smart-doc生成的文档数据，包含header、字典、错误码等。
+    4. 修改github #9 文档错误bug.
+    5. 新增接口的@author展示，方法从文档中查到找到接口负责人，生成文档可以选择关闭显示。
+    6. 重点：smart-doc的maven插件smart-doc-maven-plugin 1.0.0版本发布。
 
-## Version: 1.7.8
+#### 版本号：1.7.8
 
-- Update date: 2019-12-02
-- Update content:
-    1. Modify the bug that the response example generated when Spring Controller uses non-Spring Web annotations is wrong.
-    2. Modify the problem of outputting the log field to the document when using the mybatis-plus entity to inherit the Model object.
-    3. Add a switch for document output of transient modified fields, which is not output by default.
-    4. Add project name display to html document
-    5. Modify github #4 Void type analysis infinite loop in generics
-    6. Modify github #5 Simple enumeration parameter parsing null pointer exception
-    7. Add export PostMan json data
+- 更新日期: 2019-12-02
+- 更新内容：
+    1. 修改Spring Controller使用非Spring Web注解时生成的响应示例出错的bug。
+    2. 修改使用mybatis-plus实体继承Model对象时将log字段输出到文档的问题。
+    3. 添加对transient修饰字段文档输出开关，默认不输出。
+    4. html文档添加项目名称显示
+    5. 修改github #4 泛型中Void类型解析死循环
+    6. 修改github #5 简单枚举参数解析空指针异常
+    7. 添加导出PostMan json数据
 
-    ## Version: 1.7.7
+#### 版本号：1.7.7
 
-- Update date: 2019-11-18
-- Update content:
-    1. Modify the timestamp type field to create a json example error bug.
-    2. Fix #I1545A single interface multipath bug.
-    3. Modify the space problem of some URL generation and deployment.
-    4. Optimize the analysis of java.util.concurrent.ConcurrentMap.
+- 更新日期：2019-11-18
+- 更新内容：
+    1. 修改timestamp类型字段创建json示例错误bug。
+    2. fix #I1545A 单接口多路径bug。
+    3. 修改部分url生成部署空格问题。
+    4. 优化对java.util.concurrent.ConcurrentMap的解析。
 
-## Version: 1.7.6
+#### 版本号：1.7.6
 
-- Update date: 2019-11-13
-- Update content:
-    1. fix #I14PT5 header is rendered to the document repeatedly
-    2. fix #I14MV7 Null pointer error occurs without setting dataDictionaries
-    3. Add request parameter enumeration field analysis (trial function)
+- 更新日期：2019-11-13
+- 更新内容：
+    1. fix #I14PT5 header重复渲染到文档
+    2. fix #I14MV7 不设置dataDictionaries出现空指针错误
+    3. 增加请求参数枚举字段解析(试用功能)
 
-## Version: 1.7.5
+#### 版本号：1.7.5
 
-- Update date: 2019-11-06
-- Update content:
-    1. Optimize the title of the error list in the document, which can display Chinese or because of changes in the language environment.
-    2. Solve the bug that the internal class generated documentation error in the jar outside the project.
-    3. Support ring dependency analysis. As long as you dare to write!
-    4. Modify the content-type display error of the interface when uploading using SpringMvc or SpringBoot.
-    5. Support setting items as the first-level title of markdown.
-    6. The html link jump error caused by the same modification method comment.
-    7. Add the coverage configuration item that generates AllInOne, and the default Version is automatically added without coverage.
-    8. Added the function of exporting enumerated dictionary codes to documents.
+- 更新日期：2019-11-06
+- 更新内容：
+    1. 优化文档中错误列表的标题，可根据语言环境变化显示中文或因为。
+    2. 解决项目外jar中内部类生成文档错误的bug。
+    3. 支持环形依赖分析。只要你敢写！
+    4. 修改使用SpringMvc或者SpringBoot上传时接口的Content-Type显示错误。
+    5. 支持设置项目作为markdown的一级标题。
+    6. 修改方法注释相同引起的html链接跳转错误。
+    7. 添加生成AllInOne的覆盖配置项，默认自动加版本号不覆盖。
+    8. 新增枚举字典码导出到文档的功能。
 
-## Version: 1.7.4
+#### 版本号：1.7.4
 
-- Update date: 2019-10-29
-- Update content:
-    1. Modify bug #I1426C on gitee.
-    2. Modify bug #I13ZAL on gitee, the bug generated after structure optimization from 1.7.0~1.7.3, users are recommended to upgrade.
-    3. Modify bug #I13U4C on gitee.
-    4. Modify the problem that the title of the error code list under the Chinese language environment (default Chinese) is displayed in English.
-    5. Optimize the markdown display of AllInOne, with the automatically generated serial number when generating.
+- 更新日期：2019-10-29
+- 更新内容：
+    1. 修改gitee上bug #I1426C。
+    2. 修改gitee上bug #I13ZAL,1.7.0~1.7.3 结构优化后产生的bug，建议用户升级。
+    3. 修改gitee上bug #I13U4C。
+    4. 修改设置中文语言环境(默认中文)下错误码列表title显示英文的问题。
+    5. 优化AllInOne的markdown展示，生成时带上自动产生的序号。
 
-## Version: 1.7.3
+#### 版本号：1.7.3
 
-- Update date: 2019-10-24
-- Update content:
-    1. Optimize the document catalog display on the left side of the html5 template, which can be expanded and contracted.
-    2. Modify bug #I13R3K on gitee.
-    3. Modify bug #I13NR1 on gitee.
-    4. The open document data acquisition interface adds the unique id and method name of the return method, which is convenient for some companies to do their own docking.
+- 更新日期：2019-10-24
+- 更新内容：
+    1. 优化html5模板左侧文档目录展示，能够展开和收缩。
+    2. 修改gitee上bug #I13R3K。
+    3. 修改gitee上bug #I13NR1。
+    4. 开放的文档数据获取接口添加返回方法的唯一id和方法名称，方便一些企业自己做对接。
 
-    ## Version: 1.7.2
+#### 版本号：1.7.2
 
-- Update date: 2019-10-19
-- Update content:
-    1. Optimize the problem of comment wrapping\n\r, relying on common-util 1.8.7.
-    2. Modify bug #I135PG, #I13NR1 on gitee.
-    3. Add support for the @requestHeader annotation, and the document will bind the parameters to the request header list by itself.
-    4. Add support for javadoc apiNote tag.
-    5. Solve the problem of scanning and analyzing the private method in the controller.
-    6. Add document parsing that supports @RequestParam annotation to rewrite parameter names and set default values.
-    7. Support the use of @PostMapping and @PutMapping to request custom annotations to generate json request instances in the scenario of receiving a single json parameter.
-    8. Added analysis of Spring ResponseEntity.
-    9. Add internal class to return structure analysis.
-    10. Modify the field type displayed in the document, float, double, etc. directly from the original number to the specific type.
+- 更新日期：2019-10-19
+- 更新内容：
+    1. 优化注释换行\n\r问题，依赖common-util 1.8.7。
+    2. 修改gitee上bug #I135PG、#I13NR1。
+    3. 添加@requestHeader注解的支持，文档自定将参数绑定到请求头列表中。
+    4. 增加javadoc apiNote tag的支持。
+    5. 解决扫描分析controller中private方法的问题。
+    6. 添加支持@RequestParam注解重写参数名和设置默认值的文档解析。
+    7. 支持使用@PostMapping和@PutMapping请求自定义注解接收单个json参数场景下生成json请求实例。
+    8. 新增对Spring ResponseEntity的解析。
+    9. 增加内部类返回结构解析。
+    10. 修改文档中显示的字段类型，float、double等由原来的number直接变成具体类型。
 
-## Version: 1.7.1
+#### 版本号：1.7.1
 
-- Update date: Obsolete
-- Update content:
-    1. Optimize the problem of comment wrapping\n\r.
-    2. Modify bug #I135PG
-    3. Add requestHeader function
+- 更新日期：已废弃
+- 更新内容：
+    1. 优化注释换行\n\r问题。
+    2. 修改bug #I135PG
+    3. 添加requestHeader功能
 
-## Version: 1.7.0
+#### 版本号：1.7.0
 
-- Update date: 2019-09-30
-- Update content:
-    1. Optimize the code.
-    2. Add the function of generating HTML5 and Asciidoctor documents.
-    3. Increase the open API data interface function.
-    4. Support the derivation of asynchronous interface return such as Callable, Future, CompletableFuture.
-    5. Support Spring Boot Web Flux (written in Controller mode).
+- 更新日期：2019-09-30
+- 更新内容：
+    1. 优化代码。
+    2. 添加生成HTML5和Asciidoctor文档的功能。
+    3. 增加开放API数据接口功能。
+    4. 支持Callable,Future,CompletableFuture等异步接口返回的推导。
+    5. 支持Spring Boot Web Flux(Controller方式书写)。
 
-## Version: 1.6.4
+#### 版本号：1.6.4
 
-- Update date: 2019-09-23
-- Update content:
-    1. Optimize the code
-    2. Add the generation of common get request parameter assembly examples
-    3. Add spring mvc placeholder restful url request sample generation
+- 更新日期：2019-09-23
+- 更新内容：
+    1. 优化代码
+    2. 增加对普通的get请求参数拼装示例的生成
+    3. 增加spring mvc占位符restful url请求示例生成
 
-## Version: 1.6.2
+#### 版本号：1.6.2
 
-- Update date: 2019-09-13
-- Update content:
-    1. Modify the field comment multi-line display error bug
-    2. Added @Since tag support for field description documents
-    3. The parsing code ignores the WebRequest class to prevent the production of too much information
-    4. Upgrade the dependent version of the base library
+- 更新日期：2019-09-13
+- 更新内容：
+    1. 修改字段注释多行显示错误bug
+    2. 字段描述文档增加@Since tag的支持
+    3. 解析代码忽略WebRequest类防止生产过多信息
+    4. 升级基础库依赖版本
 
-## Version: 1.3
+#### 版本号：1.3
 
-- Update date: 2018-09-15
-- Update content:
-    1. Add PutMapping and DeleteMapping support
-    2. Add analog value generation of string date and Date type time
+- 更新日期：2018-09-15
+- 更新内容：
+    1. 增加PutMapping和DeleteMapping支持
+    2. 添加字符串date和Date类型时间的模拟值生成
 
-## Version: 1.2
+#### 版本号：1.2
 
-- Update date: 2018-09-04
-- Update content:
-    1. Add controller registration filtering function based on user feedback, this function is optional
+- 更新日期：2018-09-04
+- 更新内容：
+    1. 根据用户反馈增加controller报名过滤功能，该功能为可选项
 
-## Version: 1.1
+#### 版本号：1.1
 
-- Update date: 2018-08-30
-- Update content:
-    1. Modify the bug that the PostMapping and GetMapping value are empty and report an error
-    2. Enhance the creation of mock data for time fields
-    3. Modify the bug that smart-doc parses self-referenced objects incorrectly
+- 更新日期：2018-08-30
+- 更新内容：
+    1. 修改PostMapping和GetMapping value为空报错的bug
+    2. 增强时间字段的mock数据创建
+    3. 修改smart-doc解析自引用对象出错的bug
 
-## Version: 1.0
+#### 版本号：1.0
 
-- Update date: 2018-08-25
-- Update content:
-    1. smart-doc adds the function of exporting and archiving all documents to a markdown middleware
-    2. Reference to the Ali development manual will be directly upgraded to 1.0, the previous version is mainly personal internal testing
+- 更新日期：2018-08-25
+- 更新内容：
+    1. smart-doc增加将所有文档导出归档到一个markdown中件的功能
+    2. 参考阿里开发手册将直接提升到1.0，之前的版本主要是个人内部测试
 
-    ## Version: 0.5
+#### 版本号：0.5
 
-- Update date: 2018-08-23
-- Update content:
-     1. Rename api-doc to smart-doc and publish to the central warehouse
+- 更新日期：2018-08-23
+- 更新内容：
+    1. 将api-doc重命名为smart-doc并发布到中央仓库
 
-## Version: 0.4
+#### 版本号：0.4
 
-- Update date: 2018-07-11
-- Update content:
-     1. Modify api-doc's support for class inheritance attributes.
+- 更新日期：2018-07-11
+- 更新内容：
+    1. 修改api-doc对类继承属性的支持。
 
-## Version: 0.3
+#### 版本号：0.3
 
-- Update date: 2018-07-10
-- Update content:
-     1. api-doc adds support for jackson and fastjson annotations, and can generate return information based on annotation definitions.
+- 更新日期：2018-07-10
+- 更新内容：
+    1. api-doc增加对jackson和fastjson注解的支持，可根据注解定义来生成返回信息。
 
-## Version: 0.2
+#### 版本号：0.2
 
-- Update date: 2018-07-07
-- Update content:
-     1. Modify the bug of api-doc generic deduction.
+- 更新日期：2018-07-07
+- 更新内容：
+    1. 修改api-doc泛型推导的bug.
 
-## Version: 0.1
+#### 版本号：0.1
 
-- Update date: 2018-06-25
-- Update content:
-     1. The manual publishes api-doc to the central warehouse
+- 更新日期：2018-06-25
+- 更新内容：
+    1. 手册将api-doc发布到中央仓库

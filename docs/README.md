@@ -2,36 +2,18 @@
 
 
 ![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc)
-![License](https://img.shields.io/badge/license-Apache%202-green.svg)
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 ![closed pull requests](https://img.shields.io/github/issues-pr-closed/shalousun/smart-doc)
 ![java version](https://img.shields.io/badge/JAVA-1.8+-green.svg)
 
-## Introduce
-smart-doc is a tool that supports both JAVA REST API and Apache Dubbo RPC interface document generation. Smart-doc is based on interface source code analysis to generate interface documents, and zero annotation intrusion. You only need to write Javadoc comments when developing, smart-doc can help you generate Markdown or HTML5 document. smart-doc does not need to inject annotations into the code like Swagger.
+> smart-doc是一款同时支持JAVA REST API和Apache Dubbo RPC接口文档生成的工具。
 
-[quick start](start/quickstart.md) 
+## 概述
+smart-doc在业内率先提出基于JAVA泛型定义推导的理念， 完全基于接口源码来分析生成接口文档，不采用任何注解侵入到业务代码中。你只需要按照java-doc标准编写注释， smart-doc就能帮你生成一个简易明了的Markdown、HTML5、Postman Collection2.0+、OpenAPI 3.0+的文档。
 
-## Features
-- Zero annotation, zero learning cost, only need to write standard JAVA document comments.
-- Automatic derivation based on source code interface definition, powerful return structure derivation support.
-- Support Spring MVC, Spring Boot, Spring Boot Web Flux (Not support endpoint), Feign.
-- Supports the derivation of asynchronous interface returns such as Callable, Future, CompletableFuture.
-- Support JSR-303 parameter verification specification.
-- Support for automatic generation of request examples based on request parameters.
-- Support for generating JSON return value examples.
-- Support for loading source code from outside the project to generate field comments (including the sources jar
-  package).
-- Support for generating multiple formats of documents: Markdown,HTML5,Asciidoctor,Postman Collection 2.0+,OpenAPI 3.0.
-- Support for exporting error codes and data dictionary codes to API documentation.
-- The debug html5 page fully supports file upload and download testing.
-- Support Apache Dubbo RPC.
+> 无论你是很有经验的大佬、还是刚入行的萌新。遇到使用疑惑时，我们希望你能仔细阅读smart-doc官方码云的wiki文档。我们将smart-doc及其插件的 每一个配置项和可能在日常中遇到的问题都整理到了文档中。仔细阅读文档就是对开源项目最大的支持。
 
-
-## Best Practice
-smart-doc + [Torna](http://torna.cn/) form an industry-leading document generation and management solution, using smart-doc to complete Java source code analysis and extract annotations to generate API documents without intrusion, and automatically push the documents to the Torna enterprise-level interface document management platform.
-![smart-doc + Torna](./_images/smart-doc-en.png)
-
-> Torna is an open source API document management system, developed by the smart-doc official team. Torna provides convenience for enterprise API document management.
+查看[快速开始](zh-cn/start/quickstart.md)了解详情。
 
 
 ## TODO
@@ -42,14 +24,14 @@ smart-doc + [Torna](http://torna.cn/) form an industry-leading document generati
 
 smart-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/smart-doc-group/smart-doc/blob/master/LICENSE) file for details.
 
-**PS:** Smart-doc source code files are all with copyright notes. Please keep the original copyright when using the key code for the second open source, otherwise you will be responsible for the consequences!
+**注意：** smart-doc源代码文件全部带有版权注释，使用关键代码二次开源请保留原始版权，否则后果自负！
 
 
-## Who is using
+## 谁在使用
 
-> These are only part of the companies using smart-doc, for reference only. If you are using smart-doc, please [add your company here](https://github.com/smart-doc-group/smart-doc/issues/12) to tell us your scenario to make smart-doc better.
+> 排名不分先后，更多接入公司，欢迎在[此处](https://github.com/gggcgba/api)登记（仅供开源用户参考）
 
-![IFLYTEK](https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/iflytek.png)
+![IFLYTEK](../../_images/iflytek.png)
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/oneplus.png" title="一加" width="83px" height="83px"/>
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/xiaomi.png" title="小米" width="170px" height="83px"/>
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/neusoft.png" title="东软集团" width="180px" height="83px"/>
@@ -63,13 +45,17 @@ smart-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/
 &nbsp;&nbsp;
 
 
+## 获奖情况
 
-## Acknowledgements
-Thanks to [JetBrains SoftWare](https://www.jetbrains.com) for providing free Open Source license for this open source project. 
+- 2020 年度 OSC 中国开源项目评选”活动中获得「最积极运营项目」
+
+
+## 致谢
+感谢[JetBrains SoftWare](https://www.jetbrains.com) 为本开源项目提供的免费Open Source license。
 <img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/jetbrains-variant-3.png" width="260px" height="220px"/>
-
 ## Contact
 
-Email： 836575280@qq.com
+愿意参与构建smart-doc或者是需要交流问题可以加入qq群：
 
+<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/smart-doc-qq.png" title="qq群" width="200px" height="210px"/>
 
