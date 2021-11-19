@@ -54,7 +54,7 @@
 <img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/jetbrains-variant-3.png" width="260px" height="220px"/>
 ## Contact
 
-愿意参与构建最美-doc或者是需要交流问题可以加入微信：
+愿意参与构建最美-doc或者是需要交流问题可以加微信：
 
 <img src="https://github.com/gggcgba/api/blob/master/docs/_images/wechat.png?raw=true" title="微信二维码" width="210px" height="210px"/>
 
