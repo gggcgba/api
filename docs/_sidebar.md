@@ -19,7 +19,6 @@
   - [2.获取淘口令真实URL](zh-cn/taobao/passwordToUrl.md)
   - [代码高亮](zh-cn/diy/highlight.md)
   - [接口UI集成](zh-cn/diy/integrated.md)
-  
-- [文档效果](docsImages.md)
-- [扩展开发](expand.md)
+
+- [错误参照码](zh-cn/common/code.md)  
 - [变更日志](changelog.md)

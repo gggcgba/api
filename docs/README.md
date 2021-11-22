@@ -1,16 +1,15 @@
-## 最迷人-doc
+## omotool-doc
 
 
 ![maven](https://img.shields.io/maven-central/v/com.github.shalousun/smart-doc)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 ![closed pull requests](https://img.shields.io/github/issues-pr-closed/shalousun/smart-doc)
-![java version](https://img.shields.io/badge/JAVA-1.8+-green.svg)
+![java version](https://img.shields.io/badge/JAVA-1.7+-green.svg)
 
-> 最迷人-doc操作电商数据一条龙。
+> omotool-doc操作淘宝 天猫 1688 拼多多 京东等 电商数据。
 
 ## 概述
-最迷人-doc概述。
-
+omotool-doc概述。
 
 查看[快速开始](zh-cn/start/quickstart.md)了解详情。
 
