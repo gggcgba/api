@@ -58,7 +58,7 @@
   1. 支持在html文档中不显示参数列表。
   2. html文档使用的资源全部改成本地引用。
   3. 修复Boolean类型字段命名为is前缀时，is前缀被去除的bug。
-  4. 修复配置了字典码列表后枚举字段注释显示错误[git #139](https://github.com/smart-doc-group/smart-doc/issues/139) 。
+  4. 修复配置了字典码列表后枚举字段注释显示错误 。
   5. 修复分析过程中出现的数组越界异常 。
   6. 新增接口分组支持。
 
@@ -66,7 +66,7 @@
 #### 版本号：2.2.4
 - 更新日期: 2021-08-08
 - 更新内容：
-  1. 修复字典码推送torna错误 [gitee #I43JQR](https://gitee.com/smart-doc-team/smart-doc/issues/I43JQR)。
+  1. 修复字典码推送torna错误。
   2. 新增jsr303 @size和@length支持。
   3. 修改html的模板样式错误。
   4. 修复postman错误#I41G2E 。
@@ -80,9 +80,9 @@
   1. 增加pathPrefix配置项用于配置上下文，引入该配置项后serverUrl仅用于配置服务器地址。
   2. 支持请求头常量设置解析。
   3. 支持使用JsonIgnoreProperties和JSONType注解去忽略多字段。
-  4. 修改部分文档设置allInOneDocFileName无效的问题,[git #131](https://github.com/smart-doc-group/smart-doc/issues/131) 。
-  5. 修复dubbo rpc文档模板格式错误 [gitee #I40ZGE](https://gitee.com/smart-doc-team/smart-doc/issues/I40ZGE) .
-  6. 支持配置添加拦截器中设置全局请求参数，[git #132](https://github.com/smart-doc-group/smart-doc/issues/132) .
+  4. 修改部分文档设置allInOneDocFileName无效的问题 。
+  5. 修复dubbo rpc文档模板格式错误 .
+  6. 支持配置添加拦截器中设置全局请求参数.
   7. 修复部分类型mock未推送到torna的问题。
   
 
@@ -123,7 +123,7 @@
   4. 修复推送到torna请求或返回为数组时，示例显示错误
   5. Character类型解析支持。
   6. 修复使用Quartz中JobDataMap类型解析错误。
-  7. 移除YapiBuilder。smart-doc不在支持其他第三方接口系统，请使用torna.
+  7. 移除YapiBuilder。omotool不在支持其他第三方接口系统，请使用torna.
 
 #### 版本号：2.1.9
 
@@ -131,7 +131,7 @@
 - 更新内容：
   1. 修复inlineEnum为false时枚举展示在参数中的问题。
   2. 返回Spring文件下载对象支持自动识别为文件下载，减少手动标记@download tag。
-  3. smart-doc使用的css cdn更换，默认使用国内cdn，提升国内的加载速度，切换英文环境使用google的cdn.
+  3. omotool使用的css cdn更换，默认使用国内cdn，提升国内的加载速度，切换英文环境使用google的cdn.
   4. 添加多层泛型嵌套的解析支持。gitee #I3T6UV .
   5. 修复父类是泛型时父类中LocalDateTime类型字段生成json样例错误。
   6. 添加将接口排序order推送到torna中。
@@ -355,7 +355,7 @@
     3. 修改服务url的地址为空字符串，不再提供默认http前缀
     4. 增加泛型实际类型的显示开关控制。
     5. 修复类继承一个泛型类时的解析错误。
-    6. 优化smart-doc maven插件，提升用户在多模块下的使用体验。
+    6. 优化omotool maven插件，提升用户在多模块下的使用体验。
 
 #### 版本号：1.9.5
 
@@ -389,7 +389,7 @@
 - 更新内容：
     1. 修改前面版本修改引发的普通jsr 303验证解析错误问题。
     2. 新增忽略请求参数对象的配置gitee #I1RBJO。
-    3. 修改smart-doc的beetl配置避免和用户的业务中beetl配置冲突。
+    3. 修改omotool的beetl配置避免和用户的业务中beetl配置冲突。
     4. 新增ApiDataBuilder中获取树形格式参数数据的接口#40。
     5. 新增对Open Api 3.0的支持。
     6. 修改字典表空时内部发生空指针的问题。
@@ -401,7 +401,7 @@
 - 更新内容：
     1. 修改进去版本更新导致的泛型解析问题。
     2. 修改1.8.9版本修改后带来的dubbo接口文档显示问题
-    2. 修改smart-doc-maven-plugin生成dubbo文档时缺乏配置文件错误问题。
+    2. 修改omotool-maven-plugin生成dubbo文档时缺乏配置文件错误问题。
     3. 修改gradle插件的对多模块的支持。
 
 #### 版本号：1.9.0
@@ -450,23 +450,23 @@
 
 - 更新日期: 2020-05-09
 - 更新内容：
-    1. 增加localTime支持[gitee #I1F7CW](https://gitee.com/sunyurepository/smart-doc/issues/I1F7CW)。
-    2. 优化smart-doc导入Postman
-       collection时的header问题[gitee #I1EX42](https://gitee.com/sunyurepository/smart-doc/issues/I1EX42)
-    3. 优化smart-doc-maven-plugin加载source的过滤，支持使用通配符来过滤。
-    4. 首次发布gradle插件，发布smart-doc-gradle-plugin插件，
-    5. 修复通用泛型解析出错[git #28](https://github.com/smart-doc-group/smart-doc/issues/28)。
+    1. 增加localTime支持。
+    2. 优化omotool导入Postman
+       collection时的header问题
+    3. 优化omotool-maven-plugin加载source的过滤，支持使用通配符来过滤。
+    4. 首次发布gradle插件，发布omotool-gradle-plugin插件，
+    5. 修复通用泛型解析出错。
 
 #### 版本号：1.8.5
 
 - 更新日期: 2020-04-19
 - 更新内容：
-    1. maven插件错误码列表导出bug[git #I1EHXA](https://gitee.com/sunyurepository/smart-doc/issues/I1EHXA)。
-    2. 增加@PatchMapping支持[gitee #I1EDRF](https://gitee.com/sunyurepository/smart-doc/issues/I1EDRF)
-    3. 解决javadoc包含重复tag生成文档报错[gitee #I1ENNM](https://gitee.com/sunyurepository/smart-doc/issues/I1ENNM)。
+    1. maven插件错误码列表导出bug。
+    2. 增加@PatchMapping支持
+    3. 解决javadoc包含重复tag生成文档报错。
     4. 修改当请求参数为泛型时数据解析错误问题。
     5. 修复分组验证空指针问题，不对返回对象做分组验证处理。
-    6. 优化smart-doc-maven-plugin对多级maven项目的加载。
+    6. 优化omotool-maven-plugin对多级maven项目的加载。
     7. 支持请求参数对象替换成另外的对象来渲染文档
 
 #### 版本号：1.8.4
@@ -474,17 +474,17 @@
 - 更新日期: 2020-03-30
 - 更新内容：
     1. Controller新增时候@ignore
-       tag,可适应该tag忽略不需要生成文档的controller[git #24](https://github.com/smart-doc-group/smart-doc/issues/24)。
-    2. 参数中包含 HttpSession时smart-doc卡主，[gitee #I1CA9M](https://gitee.com/sunyurepository/smart-doc/issues/I1CA9M)
-    3. 解决一些复杂分组场景smart-doc报错的问题[gitee #I1CPSM](https://gitee.com/sunyurepository/smart-doc/issues/I1CPSM)。
-    4. 解决smart-doc-maven-plugin插件读取配置乱码问题。
+       tag,可适应该tag忽略不需要生成文档的controller。
+    2. 参数中包含 HttpSession时omotool卡主。
+    3. 解决一些复杂分组场景omotool报错的问题。
+    4. 解决omotool-maven-plugin插件读取配置乱码问题。
 
 #### 版本号：1.8.3
 
 - 更新日期: 2020-03-21
 - 更新内容：
     1. 增加从接口方法getter或者setter方法中读取注释。
-    2. 修改smart-doc默认编码为utf-8，解决生成文档乱码问题。
+    2. 修改omotool默认编码为utf-8，解决生成文档乱码问题。
     3. 增加对代码中@author tag的支持，支持多作者。
 
 #### 版本号：1.8.2
@@ -514,10 +514,10 @@
 - 更新内容：
     1. 修改参数上多个验证注解不支持的问题。
     2. 修改支持上传文件参数不列举到文档的问题。
-    3. 新增ApiDataBuilder用于获取smart-doc生成的文档数据，包含header、字典、错误码等。
+    3. 新增ApiDataBuilder用于获取omotool生成的文档数据，包含header、字典、错误码等。
     4. 合并fork分支的github book html5模板，新增搜索和锚点。
     5. 新增自定义@mock tag用于指定生成文档的字段值，@param 的参数注释增加mock值的功能(@param name 姓名|张三)
-    6. 重点：smart-doc的maven插件smart-doc-maven-plugin增强对maven标准项目的支持。
+    6. 重点：omotool的maven插件omotool-maven-plugin增强对maven标准项目的支持。
     7. 全面支持spring的表单参数绑定解析。
     8. postman json生成支持所有参数自动回填。再也不用自己建参数了。
     9. 优化对实体类中枚举字段的支持。
@@ -529,10 +529,10 @@
 - 更新内容：
     1. 修改request请求参数中嵌套对象不能解析的bug，参考gitee #I16AN2.
     2. controller参数是数组时添加@PathVariable注解会报空指针,参考gitee #I16F6G
-    3. 新增ApiDataBuilder用于获取smart-doc生成的文档数据，包含header、字典、错误码等。
+    3. 新增ApiDataBuilder用于获取omotool生成的文档数据，包含header、字典、错误码等。
     4. 修改github #9 文档错误bug.
     5. 新增接口的@author展示，方法从文档中查到找到接口负责人，生成文档可以选择关闭显示。
-    6. 重点：smart-doc的maven插件smart-doc-maven-plugin 1.0.0版本发布。
+    6. 重点：omotool的maven插件omotool-maven-plugin 1.0.0版本发布。
 
 #### 版本号：1.7.8
 
@@ -664,20 +664,20 @@
 - 更新内容：
     1. 修改PostMapping和GetMapping value为空报错的bug
     2. 增强时间字段的mock数据创建
-    3. 修改smart-doc解析自引用对象出错的bug
+    3. 修改omotool解析自引用对象出错的bug
 
 #### 版本号：1.0
 
 - 更新日期：2018-08-25
 - 更新内容：
-    1. smart-doc增加将所有文档导出归档到一个markdown中件的功能
+    1. omotool增加将所有文档导出归档到一个markdown中件的功能
     2. 参考阿里开发手册将直接提升到1.0，之前的版本主要是个人内部测试
 
 #### 版本号：0.5
 
 - 更新日期：2018-08-23
 - 更新内容：
-    1. 将api-doc重命名为smart-doc并发布到中央仓库
+    1. 将api-doc重命名为omotool并发布到中央仓库
 
 #### 版本号：0.4
 
