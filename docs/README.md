@@ -15,14 +15,7 @@ omotool-doc概述。
 
 
 ## TODO
-- Jakarta RS-API 2.x
-
-
-## License
-
-最迷人-doc is under the Apache 2.0 license. See the [LICENSE](https://github.com/gggcgba/api) file for details.
-
-**注意：** 最迷人-doc源代码文件全部带有版权注释，使用关键代码二次开源请保留原始版权，否则后果自负！
+- 还有更多TODO
 
 
 ## 谁在使用
@@ -53,7 +46,7 @@ omotool-doc概述。
 <img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/jetbrains-variant-3.png" width="260px" height="220px"/>
 ## Contact
 
-愿意参与构建最美-doc或者是需要交流问题可以加微信->：
+愿意参与构建最美-doc或者是需要交流问题可以加微信：
 
 <img src="https://github.com/gggcgba/api/blob/master/docs/_images/wechat.png?raw=true" title="微信二维码" width="210px" height="210px"/>
 
