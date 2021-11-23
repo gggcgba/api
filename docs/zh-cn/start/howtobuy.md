@@ -2,9 +2,9 @@
 
 > 微信
 >
-![输入图片说明](../../_images/wechat200.png "1.png")
+![微信:gggcgba777](../../_images/wechat200.png "1.png")
 
-> 网站
+> 网址
 >
 [omotool.com](https://www.omotool.com)
 
