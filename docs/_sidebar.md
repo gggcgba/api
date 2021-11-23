@@ -1,6 +1,7 @@
 - 入门
 
   - [快速开始](zh-cn/start/quickstart.md "快速开始")
+  - [如何购买](zh-cn/start/howtobuy.md "如何购买")
 
 - 淘宝接口
   - [1.获取淘宝详情API](zh-cn/taobao/taoDetail.md)

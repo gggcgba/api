@@ -284,7 +284,7 @@ controller包过滤，多个包用英文逗号隔开。
 只有每个controller生成一个html文件是才使用。
 ```json
 {
-    "projectName": "smart-doc"
+    "projectName": "omotool-doc"
 }
 ```
 
