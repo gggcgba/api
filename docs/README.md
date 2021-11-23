@@ -22,7 +22,7 @@ omotool-doc概述。
 
 > 排名不分先后，更多接入公司，欢迎在[此处](https://github.com/gggcgba/api)登记（仅供开源用户参考）
 
-![IFLYTEK](../../_images/iflytek.png)
+&nbsp;&nbsp;<img src="_images/iflytek.png" title="IFLYTEK" height="83px"/>
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/oneplus.png" title="一加" width="83px" height="83px"/>
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/xiaomi.png" title="小米" width="170px" height="83px"/>
 &nbsp;&nbsp;<img src="https://gitee.com/smart-doc-team/smart-doc/raw/master/images/known-users/neusoft.png" title="东软集团" width="180px" height="83px"/>
@@ -48,5 +48,5 @@ omotool-doc概述。
 
 愿意参与构建omotool-doc或者是需要交流问题可以加微信：
 
-<img src="https://github.com/gggcgba/api/blob/master/docs/_images/wechat.png?raw=true" title="微信二维码" width="210px" height="210px"/>
+<img src="_images/wechat.png" title="微信二维码" width="210px" height="210px"/>
 
